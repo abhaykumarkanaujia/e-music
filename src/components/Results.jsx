@@ -8,7 +8,7 @@ const Results = () => {
 
     return (
         <>
-            <div className='grid grid-cols-3 md:grid-cols-8 gap-3 md:m-5 p-2 md:p-5 md:mt-8'>
+            <div className='grid grid-cols-3 md:grid-cols-8 gap-3 md:m-5 p-2 md:p-5 mt-24 md:mt-8'>
                 {data ? data?.map((val) => {
                     return <div className='' key={val.id} >
                         <Card item={val} /></div>

@@ -5,8 +5,11 @@ import Results from './Results';
 const SearchPage = () => {
   return (
     <>
-        <Search/>
-        <Results/>
+
+        <Search />
+        <Results />
+
+      
     </>
   )
 }

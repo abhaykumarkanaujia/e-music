@@ -1,17 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+    const onClick = ()=>{
+        !props.nav?props.setNav(true):props.setNav(false);
+    }
     return (
         <>
 
+            <div onClick={onClick} className='md:hidden z-40 flex fixed top-0 left-0 right-0 bg-white w-100 p-3 border-b-2'>
+                
+                <button onClick={onClick} className=''>
 
-            <div className='bg-white border-2 py-4 p-3 m-2 rounded-xl w-100 h-100 hidden md:block fixed left-0 inset-y-0'>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 24 24">
+                        <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"></path>
+                    </svg>
+
+                </button>
+            
+            </div>
+
+
+            <div className={`bg-white border-2 z-40 py-4 p-3 m-2 rounded-xl w-100 h-4/6 md:h-100 ${!props.nav?'hidden':'block'} md:block fixed left-0 inset-y-0`}>
 
                 <div className='mb-8'>
                     <div className='flex items-center'>
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" d="M40.5,33.4v3.1c0,2.2-1.8,4-4,4h-25c-2.2,0-4-1.8-4-4V20.8"></path><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" d="M7.5,14.5v-3c0-2.2,1.8-4,4-4h25c2.2,0,4,1.8,4,4V28"></path><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" d="M32.5,27.9v-11c0-1.2-1.1-2.2-2.3-2l-9,1.4c-1,0.2-1.7,1-1.7,2v12.6"></path><ellipse cx="16.3" cy="30.9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" rx="3.3" ry="2.9"></ellipse><ellipse cx="29.3" cy="27.9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" rx="3.3" ry="2.9"></ellipse><line x1="32.5" x2="23.8" y1="19.5" y2="20.8" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"></line>
+                            <path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="3" d="M40.5,33.4v3.1c0,2.2-1.8,4-4,4h-25c-2.2,0-4-1.8-4-4V20.8"></path><path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="3" d="M7.5,14.5v-3c0-2.2,1.8-4,4-4h25c2.2,0,4,1.8,4,4V28"></path><path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="3" d="M32.5,27.9v-11c0-1.2-1.1-2.2-2.3-2l-9,1.4c-1,0.2-1.7,1-1.7,2v12.6"></path><ellipse cx="16.3" cy="30.9" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="3" rx="3.3" ry="2.9"></ellipse><ellipse cx="29.3" cy="27.9" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="3" rx="3.3" ry="2.9"></ellipse><line x1="32.5" x2="23.8" y1="19.5" y2="20.8" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="3"></line>
                         </svg>
 
                     </div>

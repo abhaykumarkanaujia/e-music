@@ -12,10 +12,9 @@ const Recommendations = () => {
 
     }, [])
 
-
     return (
         <>
-            <div className='md:m-5 p-2 md:p-2'>
+            <div className='md:m-5 md:mt-1 p-2 md:pt-0'>
                 <div className='grid grid-cols-3 md:grid-cols-8 gap-3 md:p-3'>
                     {recommendations && recommendations.map((val) => {
                         return <div className='' key={val.id} >
